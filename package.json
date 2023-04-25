@@ -1,0 +1,28 @@
+{
+  "name": "alps-drive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon main.js",
+    "debug": "node --inspect-brk main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarieDemeter/Alps-Drive.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarieDemeter/Alps-Drive/issues"
+  },
+  "homepage": "https://github.com/MarieDemeter/Alps-Drive#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "express-busboy": "^8.0.2",
+    "nodemon": "^2.0.15"
+  }
+}

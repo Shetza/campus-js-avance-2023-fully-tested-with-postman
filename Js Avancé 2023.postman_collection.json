@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "c5268320-9e41-492a-81d2-6eeeb9c4f25d",
+		"name": "Js Avancé 2023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST create folder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}?name=titi",
+					"host": [
+						"{{host}}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "titi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET read folder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}titi",
+					"host": [
+						"{{host}}titi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE folder",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}titi",
+					"host": [
+						"{{host}}titi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT create file",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "test-file.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET read file",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}test-file.txt",
+					"host": [
+						"{{host}}test-file",
+						"txt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE file",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}test-file.txt",
+					"host": [
+						"{{host}}test-file",
+						"txt"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "{{host}}",
+			"value": "http://localhost:3000/api/drive/",
+			"type": "default"
+		},
+		{
+			"key": "file",
+			"value": "~/Postman/files/test-file.txt",
+			"type": "default"
+		}
+	]
+}
